@@ -18,7 +18,7 @@ function Store(storeName, minCustomersEachHour, maxCustomersEachHour, avgCookieP
 }
 
 /////PROTOTYPE METHODS
-
+debugger;
 Store.prototype.generateCustomersEachHour = function() {
     for (var i = 0; i < hours.length; i++) {
         var customerPerHour = randomNumber(this.minCustomersEachHour, this.maxCustomersEachHour);
