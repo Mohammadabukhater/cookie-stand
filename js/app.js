@@ -125,17 +125,36 @@ function createFooterCookieTotals() {
     totalCookiesPerHour.push(allStoresTotalCookies);
     return totalCookiesPerHour;
 }
+///////array to hold all instances
+var newStores = [];
+//////access the form
+var formEl = document.getElementById('form');
 
+///// put a listener on the form - event(submit, callback function)
+formEl.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var newStoreName = event.target.storeName.value;
+    var newMinCustomers = parseInt(event.target.minimumCustomersPerHour.value);
+    var newMaxCustomers = parseInt(event.target.maximumCustomersPerHour.value);
+    var newAverageCookies = parseInt(event.target.averageCookiesPerSale.value);
 
     table.innerHTML = '';
+
+    stores.push(new Store(newStoreName, newMinCustomers, newMaxCustomers, newAverageCookies));
+    console.log('made it here');
 
 
     renderHeader();
     renderStores();
     renderFooter();
-
+});
 
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+function addElement(childElType, childContent, parentEl) {
+    var childEl = document.createElement(childElType);
+    childEl.textContent = childContent;
+    parentEl.appendChild(childEl);
+};

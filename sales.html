@@ -16,16 +16,40 @@
 </nav>
 <header>
     <h1 id="salesH1">Salmon Sales</h1>
-
 </header>
+    <form id='form'>
+        <fieldset>
+            <lable>Store Name</lable><br/>
+            <input name="storeName" type="text" /></br>
+
+            <lable>Minimum Customers Per Hour</lable><br/>
+            <input name="minimumCustomersPerHour" type="text" /></br>
+
+            <lable>Maximum Customers Per Hour</lable><br/>
+            <input name="maximumCustomersPerHour" type="text" /></br>
+
+            <lable>Average Cookies Per Sale</lable><br/>
+            <input name="averageCookiesPerSale" type="text" /></br>
+
+            <input id="inputButton" type="submit" name="submit" value="submit" />
+        </fieldset>
+        <img src="img/fish.jpg" />
+    </form>
+
+    <table>
+        <tbody id="table"></tbody>
+    </table>
 
 <body id="salesBody">
-   
+
 
     <table>
         <tbody id="table"></tbody>
     </table>
 </body>
 <footer>
-<script src="/js/app.js"></script>
+    <script src="/js/app.js"></script>
+</footer>
+    
+
 </html>
